@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Directory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Student Directory</h1>
+
+<select id="courseFilter" onchange="filterStudents()">
+  <option value="All">All Courses</option>
+  <option value="CSE">CSE</option>
+  <option value="Cyber Security">Cyber Security</option>
+</select>
+
+<div id="students"></div>
+
+<script src="data/students.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
