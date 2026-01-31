@@ -87,12 +87,18 @@ body {
 
 .login-card {
   background: white;
-  padding: 30px 28px;
+  padding: 32px 30px;
   border-radius: 14px;
-  width: 320px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  width: 340px;
+
+  /* SHADOW */
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.15);
+
   color: #1e293b;
 }
+
 
 .login-card h2 {
   margin-bottom: 20px;
