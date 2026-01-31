@@ -134,3 +134,76 @@ footer {
 footer {
   margin-top: 50px;
 }
+/* ============================= */
+/* WHY CAMPUSCONNECT – COLORFUL */
+/* ============================= */
+
+.feature-card {
+  background: white;
+  padding: 26px;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Soft color overlay */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  z-index: 0;
+}
+
+/* Top accent strip */
+.feature-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+}
+
+/* Ensure text stays above overlays */
+.feature-card h3,
+.feature-card p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effect */
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================= */
+/* INDIVIDUAL CARD COLOR THEMES */
+/* ============================= */
+
+/* 🎓 Student Directory – Blue / Purple */
+.feature-card.directory::before,
+.feature-card.directory::after {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+}
+
+/* 📅 Calendar – Green / Teal */
+.feature-card.calendar::before,
+.feature-card.calendar::after {
+  background: linear-gradient(135deg, #22c55e, #14b8a6);
+}
+
+/* 📢 Announcements – Orange / Red */
+.feature-card.announcements::before,
+.feature-card.announcements::after {
+  background: linear-gradient(135deg, #f97316, #ef4444);
+}
+
+/* 📚 PYQs – Yellow / Amber */
+.feature-card.pyqs::before,
+.feature-card.pyqs::after {
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+}
