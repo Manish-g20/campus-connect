@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>CampusConnect</title>
+  <script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,6 +34,15 @@
     <li> Easy accesss to PYQs</li>
   </ul>
 </section>
+  <button onclick="logout()">Logout</button>
+
+<script>
+function logout() {
+  localStorage.clear();
+  window.location.href = "login.html";
+}
+</script>
+
 
 <footer>
   <p>Hackathon MVP | Phase-1 Demo</p>
