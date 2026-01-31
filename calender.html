@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Campus Calendar</title>
+  <meta charset="UTF-8">
+  <title>NFSU Delhi – Campus Calendar</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Campus Calendar</h1>
-<div id="events"></div>
+<header>
+  <h1>Campus Calendar</h1>
+  <p>NFSU Delhi – Academic & Campus Events</p>
+</header>
 
-<script src="data/events.js"></script>
-<script src="script.js"></script>
+<section class="calendar-container">
+  <iframe
+    src="https://calendar.google.com/calendar/embed?src=c_25d44c76a8fe6fd383e4ca571633677a38e8c2ea36709e92f6da15fd879df084%40group.calendar.google.com&ctz=Asia%2FKolkata"
+    style="border: 0"
+    width="100%"
+    height="600"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
+</section>
+
 </body>
 </html>
