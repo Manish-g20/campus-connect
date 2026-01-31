@@ -18,12 +18,20 @@
   <p>A centralized digital platform for college life</p>
 </header>
 
-<nav>
-  <a href="students.html">Students</a>
-  <a href="calendar.html">Calendar</a>
-  <a href="announcements.html">Announcements</a>
-  <a href="pyqs.html">PYQs</a>
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="students.html">Students</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="pyqs.html">PYQs</a>
+  </div>
+
+  <div class="nav-user">
+    <span id="userEmail"></span>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+  </div>
 </nav>
+
 
 <section class="container">
   <h2>Why CampusConnect?</h2>
@@ -35,14 +43,6 @@
   </ul>
 </section>
   <button onclick="logout()">Logout</button>
-
-<script>
-function logout() {
-  localStorage.clear();
-  window.location.href = "login.html";
-}
-</script>
-
 
 <footer>
   <p>Hackathon MVP | Phase-1 Demo</p>
