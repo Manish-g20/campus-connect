@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
+  
 <body>
 
 <header>
@@ -31,8 +32,7 @@
     <button onclick="logout()" class="logout-btn">Logout</button>
   </div>
 </nav>
-
-
+  
 <section class="container">
   <h2>Why CampusConnect?</h2>
   <ul>
@@ -47,6 +47,12 @@
 <footer>
   <p>Hackathon MVP | Phase-1 Demo</p>
 </footer>
+<script>
+  const email = localStorage.getItem("userEmail");
+  if (email) {
+    document.getElementById("userEmail").innerText = email;
+  }
+</script>
 
 </body>
 </html>
