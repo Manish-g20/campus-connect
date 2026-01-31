@@ -303,22 +303,34 @@ html {
   font-weight: bold;
   text-decoration: none;
 }
-/* Page-level navigation (Back link) */
+//* ============================= */
+/* Page Header & Back Navigation */
+/* ============================= */
+
+.page-header {
+  background: #1e293b;
+  color: white;
+  padding: 30px 20px 40px;
+  text-align: center;
+}
+
+/* Back-to-home navigation */
 .page-nav {
   max-width: 1100px;
-  margin: 20px auto 0;
+  margin: 0 auto 12px;
   padding: 0 20px;
+  text-align: left;
 }
 
 .page-nav a {
-  color: #2563eb;
+  color: #93c5fd;
   font-weight: 600;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .page-nav a:hover {
   text-decoration: underline;
 }
-
 
 
