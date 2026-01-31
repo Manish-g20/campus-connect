@@ -257,6 +257,9 @@ header p {
   color: #64748b;
   margin-top: 5px;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 
 
