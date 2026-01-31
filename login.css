@@ -57,3 +57,74 @@ body {
   color: #94a3b8;
 }
 
+/* ===================== */
+/* AUTH / LOGIN PAGE     */
+/* ===================== */
+
+.auth-body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  text-align: center;
+  color: white;
+}
+
+.login-container h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #cbd5f5;
+  margin-bottom: 25px;
+}
+
+.login-card {
+  background: white;
+  padding: 30px 28px;
+  border-radius: 14px;
+  width: 320px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  color: #1e293b;
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #1d4ed8;
+}
+
+.hint {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #64748b;
+}
