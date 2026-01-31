@@ -1,22 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Student Directory</title>
+  <meta charset="UTF-8">
+  <title>Student Directory | CampusConnect</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Auth protection -->
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
 </head>
+
 <body>
 
-<h1>Student Directory</h1>
+<header>
+  <h1>Student Directory</h1>
+  <p>National Forensic Sciences University, Delhi Campus</p>
+</header>
 
-<select id="courseFilter" onchange="filterStudents()">
-  <option value="All">All Courses</option>
-  <option value="CSE">CSE</option>
-  <option value="Cyber Security">Cyber Security</option>
-</select>
+<section class="container">
 
-<div id="students"></div>
+  <!-- Filters -->
+  <div class="filters">
+    <select id="courseFilter">
+      <option value="">All Courses</option>
+      <option>BTech–MTech Cybersecurity & Digital Forensics</option>
+      <option>BSc–MSc Criminology & Forensic Science</option>
+      <option>BSc–MSc Forensic Science</option>
+      <option>MBA Fraud Management & Investigation</option>
+      <option>BBA LLB</option>
+    </select>
 
-<script src="data/students.js"></script>
-<script src="script.js"></script>
+    <select id="yearFilter">
+      <option value="">All Years</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <!-- Student Cards -->
+  <div id="students" class="student-grid"></div>
+
+</section>
+
+<script src="students.js"></script>
 </body>
 </html>
