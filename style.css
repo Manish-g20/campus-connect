@@ -357,4 +357,30 @@ html {
   color: #64748b;
   margin-bottom: 10px;
 }
+/* PYQ SECTION */
+
+.pyq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.pyq-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.pyq-card h3 {
+  margin-bottom: 8px;
+}
+
+.pyq-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
 
