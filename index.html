@@ -48,10 +48,11 @@
   <p>Hackathon MVP | Phase-1 Demo</p>
 </footer>
 <script>
-  const email = localStorage.getItem("userEmail");
-  if (email) {
-    document.getElementById("userEmail").innerText = email;
-  }
+function logout() {
+  localStorage.removeItem("loggedIn");
+  localStorage.removeItem("userEmail");
+  window.location.href = "login.html";
+}
 </script>
 
 </body>
