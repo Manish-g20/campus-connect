@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Announcements</title>
+  <meta charset="UTF-8">
+  <title>Announcements | CampusConnect</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Auth protection -->
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
 </head>
+
 <body>
 
-<h1>Club Announcements</h1>
-<div id="announcements"></div>
+<header class="page-header">
+  <nav class="page-nav">
+    <a href="index.html">← Back to Home</a>
+  </nav>
+  <h1>Campus Announcements</h1>
+  <p>NFSU Delhi – Clubs, Societies & Departments</p>
+</header>
+
+<section class="container">
+
+  <!-- Category Filter -->
+  <div class="filters">
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+      <option>Academic</option>
+      <option>Clubs & Societies</option>
+      <option>Workshops</option>
+      <option>Examinations</option>
+      <option>Placements</option>
+    </select>
+  </div>
+
+  <!-- Announcements -->
+  <div id="announcements" class="announcement-list"></div>
+
+</section>
 
 <script src="data/announcements.js"></script>
-<script src="script.js"></script>
 </body>
 </html>
