@@ -237,4 +237,13 @@ footer {
 .feature-card.pyqs .icon-circle {
   background: rgba(250, 204, 21, 0.18);
 }
+.feature-card {
+  cursor: pointer;
+}
+
+.feature-card:active {
+  transform: translateY(-4px) scale(0.98);
+}
+
+
 
