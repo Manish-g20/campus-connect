@@ -1,160 +1,125 @@
-body {
+/* =========================
+   RESET & BASE
+========================= */
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #1e293b, #334155);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.login-container {
-  background: white;
-  padding: 40px;
-  width: 320px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
-
-.login-container h1 {
-  margin-bottom: 5px;
-  color: #1e293b;
-}
-
-.subtitle {
-  margin-bottom: 25px;
-  color: #64748b;
-}
-
-.login-container input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #cbd5e1;
-  font-size: 14px;
-}
-
-.login-container button {
-  width: 100%;
-  padding: 10px;
-  background: #1e293b;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.login-container button:hover {
-  background: #0f172a;
-}
-
-.hint {
-  margin-top: 15px;
-  font-size: 12px;
-  color: #94a3b8;
-}
-
-/* ===================== */
-/* AUTH / LOGIN PAGE     */
-/* ===================== */
+/* =========================
+   PAGE BACKGROUND
+========================= */
 
 .auth-body {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1e293b, #0f172a);
-  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
 }
+
+/* =========================
+   OUTER WRAPPER
+========================= */
 
 .login-container {
-  text-align: center;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
+/* Branding */
 .login-container h1 {
   font-size: 36px;
-  margin-bottom: 5px;
+  font-weight: 700;
+  color: #e5e7eb;
 }
 
 .subtitle {
   color: #cbd5f5;
-  margin-bottom: 25px;
+  font-size: 14px;
+  margin-top: -10px;
 }
+
+/* =========================
+   LOGIN CARD
+========================= */
 
 .login-card {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #f8fafc 100%
-  );
-  padding: 32px 30px;
-  border-radius: 14px;
-  width: 340px;
+  width: 360px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
 
   box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.25),
-    0 4px 10px rgba(0, 0, 0, 0.15);
-
-  color: #1e293b;
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    0 6px 14px rgba(0, 0, 0, 0.2);
 }
-
-
 
 .login-card h2 {
   margin-bottom: 20px;
+  color: #1e293b;
+  font-size: 22px;
 }
+
+/* =========================
+   INPUTS
+========================= */
 
 .login-card input {
   width: 100%;
-  padding: 10px 12px;
+  padding: 12px 14px;
   margin-bottom: 14px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #cbd5e1;
   font-size: 14px;
-}
-
-.login-card button {
-  width: 100%;
-  padding: 10px;
-  background: #2563eb;
-  border: none;
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.login-card button:hover {
-  background: #1d4ed8;
-}
-
-.hint {
-  margin-top: 12px;
-  font-size: 12px;
-  color: #64748b;
-}
-.login-card input {
-  background: #f1f5f9;
-  border: 1px solid #cbd5e1;
-  transition: border 0.2s, box-shadow 0.2s;
+  background: #f8fafc;
+  transition: all 0.2s ease;
 }
 
 .login-card input:focus {
   outline: none;
   border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-.login-card button {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-}
-.login-container {
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  background: #ffffff;
 }
 
+/* =========================
+   BUTTON
+========================= */
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login-card button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.4);
+}
+
+/* =========================
+   HINT TEXT
+========================= */
+
+.hint {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #64748b;
+}
