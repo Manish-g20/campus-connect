@@ -1,21 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>PYQs</title>
+  <meta charset="UTF-8">
+  <title>PYQs Repository | CampusConnect</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Auth protection -->
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
 </head>
+
 <body>
 
-<h1>Previous Year Questionsssss</h1>
+<header class="page-header">
+  <nav class="page-nav">
+    <a href="index.html">← Back to Home</a>
+  </nav>
+  <h1>Previous Year Question Papers</h1>
+  <p>NFSU Delhi – Centralized PYQ Repository</p>
+</header>
 
+<section class="container">
 
-<h2>Bachelors</h2>
-<div id="bachelors"></div>
+  <!-- Filters -->
+  <div class="filters">
+    <select id="courseFilter">
+      <option value="">All Courses</option>
+      <option>BTech–MTech Cybersecurity & Digital Forensics</option>
+      <option>BSc–MSc Forensic Science</option>
+      <option>BSc–MSc Criminology & Forensic Science</option>
+      <option>MBA Fraud Management & Investigation</option>
+      <option>BBA LLB</option>
+    </select>
 
-<h2>Masters</h2>
-<div id="masters"></div>
+    <select id="yearFilter">
+      <option value="">All Years</option>
+      <option>2019</option>
+      <option>2020</option>
+      <option>2021</option>
+      <option>2022</option>
+      <option>2023</option>
+      <option>2024</option>
+    </select>
+
+    <select id="subjectFilter">
+      <option value="">All Subjects</option>
+    </select>
+  </div>
+
+  <!-- PYQ List -->
+  <div id="pyqs" class="pyq-grid"></div>
+
+</section>
 
 <script src="data/pyqs.js"></script>
-<script src="script.js"></script>
 </body>
 </html>
