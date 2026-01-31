@@ -2,28 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CampusConnect | Login</title>
-  <link rel="stylesheet" href="login.css">
+  <title>Login | CampusConnect</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<div class="login-container">
-  <h1>CampusConnect</h1>
-  <p class="subtitle">Login to continue</p>
+<body class="auth-body">
 
-  <form id="loginForm">
-    <input type="email" id="email" placeholder="College Email ID" required>
-    <input type="password" id="password" placeholder="Password" required>
+  <div class="login-container">
+    <h1>CampusConnect</h1>
+    <p class="subtitle">NFSU Delhi Campus</p>
 
-    <button type="submit">Login</button>
-  </form>
+    <form onsubmit="login(event)" class="login-card">
+      <h2>Login</h2>
 
-  <p class="hint">
-    * Demo login (no real authentication yet)
-  </p>
-</div>
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter your college email"
+        required
+      />
 
-<script src="login.js"></script>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter password"
+        required
+      />
+
+      <button type="submit">Login</button>
+
+      <p class="hint">
+        Use any email & password (Demo Login)
+      </p>
+    </form>
+  </div>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("email").value;
+
+      localStorage.setItem("loggedIn", "true");
+      localStorage.setItem("userEmail", email);
+
+      window.location.href = "index.html";
+    }
+  </script>
+
 </body>
 </html>
-
